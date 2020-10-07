@@ -50,7 +50,7 @@
       <table class="table">
         <tbody>
           <tr>
-            <td><%= attachment_image_tag @book.user, :profile_image, format:'jpeg', fallback: "no_image_square.jpg", size: "50x50" %></br>
+            <td><%= attachment_image_tag @book.user, :profile_image, format:'jpeg', fallback: "no_image.jpg", size: "50x50" %></br>
             <%= link_to @book.user.name, user_path(@book.user) %></td>
             <td><%= link_to @book.title, book_path(@book) %></td>
             <td><%= @book.body %></td>

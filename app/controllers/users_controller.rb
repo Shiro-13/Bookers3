@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @book = Book.new
+    @books = @user.books
   end
 
   def edit
@@ -28,7 +29,7 @@ class UsersController < ApplicationController
       flash[:notice] = "You have updated user successfully."
       redirect_to user_path(@user)
     else
-      render edit
+      render :edit
     end
   end
 

@@ -1,11 +1,13 @@
-<h1>Users info</h1>
+<%= flash[:notice] %>
+
+<h1>User info</h1>
 
 <% if @user.errors.any? %>
 <div class="error">
   <h5><%= pluralize(@user.errors.count, "error") %>prohibited this obj from being saved:</h5>
   <ul>
-    <% @user.errors.full_messages.each do |msg| %>
-      <il><%= msg %></il>
+    <% @user.errors.full_messages.each do |message| %>
+      <il><%= message %></il>
     <% end %>
   </ul>
 </div>
